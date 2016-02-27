@@ -1,0 +1,50 @@
+{
+  "name": "HapiNodeSkeleton",
+  "title": "HapiNodeSkeleton",
+  "private": true,
+  "version": "2.0.0",
+  "tos": "ToS",
+  "description": "HapiNodeSkeleton",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r bootstrap.test.js 'src/**/*.test.js'",
+    "test-ci": "XUNIT_FILE=${WORKSPACE}/junit.xml mocha -R xunit-file -r bootstrap.test.js 'src/**/*.test.js'",
+    "test-watch": "mocha -w -G -r bootstrap.test.js 'src/**/*.test.js'",
+    "check-build": "check-build",
+    "ci": "npm run test-ci && npm run check-build",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErwannNevou/HapiNodeSkeleton.git"
+  },
+  "author": {
+    "name": "ErwannNevou",
+    "url": "https://github.com/ErwannNevou",
+    "email": "erwann.nevou@gmail.com"
+  },
+  "engines": {
+    "node": "4"
+  },
+  "bugs": {
+    "url": "https://github.com/ErwannNevou/HapiNodeSkeleton/issues"
+  },
+  "homepage": "https://github.com/ErwannNevou/HapiNodeSkeleton",
+  "dependencies": {
+    "async": "1.x.x",
+    "common-env": "5.x.x",
+    "deepmerge": "0.2.x",
+    "hapi": "11.x.x",
+    "lodash": "3.x.x",
+    "swaggerize-hapi": "1.x.x",
+    "wascally": "0.x.x",
+    "when": "3.x.x",
+    "winston": "2.x.x"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "check-build": "*",
+    "mocha": "2.x.x",
+    "xunit-file": "0.0.6"
+  }
+}
